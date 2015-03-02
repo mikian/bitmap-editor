@@ -15,7 +15,7 @@ class VLine < Command
     end
 
     (@y1..@y2).each do |y|
-      app.bitmap.data[(y-1)*app.bitmap.width+@x] = @colour
+      app.bitmap.data[(y-1)*app.bitmap.width+(@x-1)] = @colour
     end
   end
 end
