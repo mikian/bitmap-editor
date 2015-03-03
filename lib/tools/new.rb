@@ -1,7 +1,6 @@
-require './lib/bitmap'
-
 class New < Tool
   register /I (\d+) (\d+)/
+  desc 'I W H', 'Creates a new bitmap with given width W and height H'
 
   def initialize(width, height)
     @width = width.to_i

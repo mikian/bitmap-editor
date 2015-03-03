@@ -1,5 +1,6 @@
 class Show < Tool
   register /S/
+  desc 'S', 'Shows current bitmap'
 
   def execute(app)
     unless app.bitmap

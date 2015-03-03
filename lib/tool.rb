@@ -3,8 +3,16 @@ class Tool
     tools[self] = Regexp.new("\\A#{re}\\Z")
   end
 
+  def self.desc(usage, description)
+    help << [usage, description]
+  end
+
   def self.tools
     @@tools ||= {}
+  end
+
+  def self.help
+    @@help ||= []
   end
 
   def self.parse(line)

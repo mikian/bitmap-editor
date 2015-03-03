@@ -1,5 +1,6 @@
 class HLine < Tool
   register /H (\d+) (\d+) (\d+) ([A-Z])/
+  desc 'H X1 X2 Y C', 'Draws horizontal line from X1,Y to X2,Y with colour C'
 
   def initialize(x1, x2, y, colour)
     @x1 = x1.to_i

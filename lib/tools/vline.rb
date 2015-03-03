@@ -1,5 +1,6 @@
 class VLine < Tool
   register /V (\d+) (\d+) (\d+) ([A-Z])/
+  desc 'V X1 Y1 Y2 C', 'Draws vertical line from X,Y1 to X,Y2 with colour C'
 
   def initialize(x, y1, y2, colour)
     @x = x.to_i

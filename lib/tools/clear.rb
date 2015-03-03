@@ -1,5 +1,6 @@
 class Clear < Tool
   register /C/
+  desc "C", "Clears image"
 
   def execute(app)
     unless app.bitmap

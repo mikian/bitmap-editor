@@ -1,5 +1,6 @@
 class Fill < Tool
   register /F (\d+) (\d+) ([A-Z])/
+  desc 'F X Y C', 'Fills region that includes point (X,Y) with given colour C'
 
   def initialize(x, y, colour)
     @x = x.to_i
