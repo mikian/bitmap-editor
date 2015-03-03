@@ -1,5 +1,6 @@
 class Light < Tool
   register /L (\d+) (\d+) ([A-Z])/
+  desc 'L X Y C', 'Lights a pixel at X,Y with colour C'
 
   def initialize(x, y, colour)
     @x = x.to_i
