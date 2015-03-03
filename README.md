@@ -11,11 +11,11 @@ Install all required gems first with command
 
 After this step you can start program with command:
 
-    ./editor.rb
+    bin/editor
 
     (or)
 
-    ruby editor.rb
+    ruby bin/editor
 
 ## Usage
 
