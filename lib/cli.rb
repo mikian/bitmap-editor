@@ -18,6 +18,7 @@ class CLI
   def start
     loop do
       line = Readline::readline('> ')
+
       cmd, params = Tool.parse(line)
 
       # Quit if requested
