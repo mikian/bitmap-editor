@@ -1,6 +1,6 @@
 require './lib/bitmap'
 
-class New < Command
+class New < Tool
   register /I (\d+) (\d+)/
 
   def initialize(width, height)

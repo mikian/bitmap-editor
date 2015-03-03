@@ -1,4 +1,4 @@
-class Noop < Command
+class Noop < Tool
   def execute(_)
   end
 end

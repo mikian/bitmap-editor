@@ -1,4 +1,4 @@
-class HLine < Command
+class HLine < Tool
   register /H (\d+) (\d+) (\d+) ([A-Z])/
 
   def initialize(x1, x2, y, colour)

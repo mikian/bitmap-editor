@@ -1,4 +1,4 @@
-class VLine < Command
+class VLine < Tool
   register /V (\d+) (\d+) (\d+) ([A-Z])/
 
   def initialize(x, y1, y2, colour)

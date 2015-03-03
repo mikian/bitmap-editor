@@ -1,4 +1,4 @@
-class Fill < Command
+class Fill < Tool
   register /F (\d+) (\d+) ([A-Z])/
 
   def initialize(x, y, colour)

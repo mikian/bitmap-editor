@@ -1,4 +1,4 @@
-class Light < Command
+class Light < Tool
   register /L (\d+) (\d+) ([A-Z])/
 
   def initialize(x, y, colour)

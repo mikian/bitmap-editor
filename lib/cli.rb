@@ -3,9 +3,10 @@
 # All Rights Reserved
 
 require 'readline'
+
 require './lib/app'
 require './lib/bitmap'
-require './lib/command'
+require './lib/tool'
 
 class CLI
   attr_reader :app
@@ -17,8 +18,7 @@ class CLI
   def start
     loop do
       line = Readline::readline('> ')
-      # Short cut to termiante session
-      cmd, params = Command.parse(line)
+      cmd, params = Tool.parse(line)
 
       # Quit if requested
       break if cmd == Terminate
@@ -27,7 +27,6 @@ class CLI
       cmd.new(*params).execute(app)
 
       Readline::HISTORY.push(line)
-      puts "You typed: #{cmd} #{params.inspect}"
     end
   end
 

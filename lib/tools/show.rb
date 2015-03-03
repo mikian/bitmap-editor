@@ -1,5 +1,5 @@
-class Clear < Command
-  register /C/
+class Show < Tool
+  register /S/
 
   def execute(app)
     unless app.bitmap
@@ -7,6 +7,8 @@ class Clear < Command
       return
     end
 
-    app.bitmap.data.fill('O')
+    app.bitmap.rows.each do |row|
+      puts row.join('')
+    end
   end
 end
