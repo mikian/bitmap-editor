@@ -10,6 +10,5 @@ class New < Command
 
   def execute(app)
     app.bitmap = Bitmap.new(@width, @height)
-    puts app.bitmap.inspect
   end
 end

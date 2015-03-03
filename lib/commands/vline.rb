@@ -14,8 +14,13 @@ class VLine < Command
       return
     end
 
+    if !app.bitmap.bounds?(@x, @y1) || !app.bitmap.bounds?(@x, @y2)
+      puts "ERR: Coordinates out of bounds"
+      return
+    end
+
     (@y1..@y2).each do |y|
-      app.bitmap.data[(y-1)*app.bitmap.width+(@x-1)] = @colour
+      app.bitmap[@x, y] = @colour
     end
   end
 end

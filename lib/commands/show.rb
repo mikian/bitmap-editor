@@ -7,8 +7,8 @@ class Show < Command
       return
     end
 
-    app.bitmap.data.each_slice(app.bitmap.width) do |line|
-      puts line.join('')
+    app.bitmap.rows.each do |row|
+      puts row.join('')
     end
   end
 end

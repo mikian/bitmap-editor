@@ -15,7 +15,7 @@ class HLine < Command
     end
 
     (@x1..@x2).each do |x|
-      app.bitmap.data[(@y-1)*app.bitmap.width+(x-1)] = @colour
+      app.bitmap[x, @y] = @colour
     end
   end
 end

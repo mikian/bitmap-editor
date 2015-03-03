@@ -13,11 +13,11 @@ class Light < Command
       return
     end
 
-    if app.bitmap.width < @x || app.bitmap.height < @y
+    if !app.bitmap.bounds?(@x, @y)
       puts "ERR: Bitmap size is smaller than coordinates given"
       return
     end
 
-    app.bitmap.data[(@y-1)*app.bitmap.width+(@x-1)] = @colour
+    app.bitmap[@x, @y] = @colour
   end
 end
