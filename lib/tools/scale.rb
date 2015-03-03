@@ -19,15 +19,19 @@ class Scale < Tool
     # Create new bitmap
     bitmap = Bitmap.new(width, height)
 
+    # Fill new bitmap
     (1..height).each do |y|
       (1..width).each do |x|
+        # Determine original pixel coordinates to be copied
         px = ((x-1)/@factor).floor + 1
         py = ((y-1)/@factor).floor + 1
 
+        # Copy piel colour
         bitmap[x, y] = app.bitmap[px, py]
       end
     end
 
+    # Store new bitmap to app
     app.bitmap = bitmap
   end
 end
